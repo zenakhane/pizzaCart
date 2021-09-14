@@ -46,17 +46,21 @@
                <tr>
                </tr>
             </table>
+            
+        
             <form action="/" method="POST">
             <div class="orderBox">
               <button type="submit" class="orderPizzabtn"style="width: 70%;" onclick="myFunction()">Order</button>
             </div>
          </div>
+         </form>
          <div class="pizzas">
+            <form action="/buy" method="POST">
             <div class="pizza_large">
                <div class="info">
                   <img src="pizza (1).png" alt="">
                   <h2>Large Pizza</h2>
-                  <strong>R87.99</strong>
+                  <strong>{{largePizza}}</strong>
                   <div>
                      large margeritha pizza with 3 toppings max.
                      3 meat toppings max.
@@ -64,14 +68,16 @@
                   </div>
                </div>
                <div class="orderBox">
-                  <button type="submit" class="btn orderLargePizza" style="width: 70%;"  onclick="myFunction()">Buy</button>
+                  <button type="submit" class="btn orderLargePizza" style="width: 70%;"  value="large"name="large" onclick="myFunction()">Buy</button>
                </div>
             </div>
+            </form>
+            <form action="/buy" method="POST">
             <div class="pizza_medium">
                <div class="info">
                   <img src="pizza (1).png" alt="">
                   <h2>Medium Pizza</h2>
-                  <strong>R58.99</strong>
+                  <strong>{{mediumPizza}}</strong>
                   <div>
                      medium margeritha pizza with 3 toppings max.
                      2 or less meat topping.
@@ -79,26 +85,25 @@
                   </div>
                </div>
                <div class="orderBox">
-                  <button type="submit" class="btn orderMediumPizza" style="width: 70%;" type="submit" onclick="myFunction()">Buy</button>
+                  <button type="submit" class="btn orderMediumPizza" style="width: 70%;" value="medium"name="medium"  type="submit" onclick="myFunction()">Buy</button>
                </div>
+
             </div>
+            </form>
+            <form action="/buy" method="POST">
             <div class="pizza_small">
                <div class="info">
                   <img src="pizza (1).png" alt="">
                   <h2>Small Pizza</h2>
-                  <strong>
-                     <R31 class="99"></R31>
-                  </strong>
-                  <i>
-                     <ul>
-                        <li>small pizza with 3 toppings</li>
-                        <li>1 meat topping.</li>
-                        <li>3 or less other toppings.</li>
-                     </ul>
-                  </i>
+                  <strong>{{smallPizza}}</strong>
+                  <div>
+                     small pizza with 3 toppings
+                     1 meat topping.</li>
+                     3 or less other toppings
+                     <div>
                </div>
                <div class="orderBox">
-                  <button type="submit" class="btn orderSmallPizza" style="width: 70%;" type="submit" onclick="myFunction()">Buy</button>
+                  <button type="submit" class="btn orderSmallPizza" style="width: 70%;" value="small" name="small"  type="submit" onclick="myFunction()">Buy</button>
                </div>
             </div>
             </form>

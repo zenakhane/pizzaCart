@@ -12,7 +12,7 @@ body {
 	background-color:gray;
 	border-radius: 0.25em;
 	border: 0 solid snow;
-	color: snow;
+	color: snow; 
 }
 
 .container {
@@ -48,50 +48,104 @@ body {
 		background-color:chocolate;
 		margin: 10px;
 		text-align: center;
+		border-radius: 10px;
 		
 	}
 	.pizza_medium{
     background-color: rgb(226, 207, 60);
     margin: 10px;
 	text-align: center;
+	border-radius: 10px;
+		
 	}
 	.pizza_small{
 		background-color: rgb(228, 20, 159);
 		margin: 10px;
 		text-align: center;
+		border-radius: 10px;
+		
 	}
+	.orderPizzabtn{
+		padding: 1em;
+		margin: 1em;
+		font-size: 1em;
+		background-color:gray;
+		border-radius: 0.25em;
+		border: 0 solid snow;
+		color: snow
+		}
 
 	ul{
 		list-style-type: none;
 	}
-	.cart{
-		border: 50%;
-	font-size: larger;
-		margin: 20px;
-		background-color: greenyellow;
-	}
-	table{
-		
-		margin-left: auto;
-        margin-right: auto;
-		
-	}
-	.cartTotal{
+	.cart {
+		/* position: fixed;  */
+		width: 100%;
+		margin: auto; 
+		 width: 40%; 
+		min-height: 15em; 
+		background-color: #CDD93F;
+		top: 0em;
+		right: 0em;
+		margin-left: 1em;
+		padding: 1em;
 	
-	text-align: center;
+		border-radius: 0.25em;
+		 z-index: 1000; 
 	}
-	h2{
-		text-align: center;
+
+	.cartTotal {
+		position: fixed;
+		/* width: 100%; */
+		/* margin: auto; */
+		width: 20%;
+		/* min-height: 15em; */
+		/* background-color: #CDD93F; */
+		top: 0em;
+		right: 0em;
+		margin-right: 1em;
+		padding: 1em;
+		/* border: 0.1em solid; */
+		border-radius: 0.25em;
+		/* z-index: 1000; */
 	}
-	span{
-		font-size: large;
+
+	.cart table {
+		border-collapse:collapse;
 	}
-	.orderPizzabtn{
-	padding: 1em;
-	margin: 1em;
-	font-size: 1em;
-	background-color:gray;
-	border-radius: 0.25em;
-	border: 0 solid snow;
-	color: snow
+	
+	.cart table {
+		border-collapse: collapse;
+		width: 50%;
 	}
+
+	.cart td {
+		border-top: 1px solid snow;
+	} 
+
+	.cart th, td {
+		padding: 15px;
+		text-align: left;
+	}
+	.cart tr{
+		border-collapse: collapse;
+
+	}
+
+	.cart img {
+		width: 2em;
+	}
+
+	.cart h3 {
+		/* text-decoration: underline; */display: inline;
+	}
+
+	.cartTotal {
+		padding: 1em;
+	}
+
+	.cartTotal img {
+		/* padding: 1em; */
+		width: 2em;
+	}
+	

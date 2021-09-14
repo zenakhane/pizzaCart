@@ -1,12 +1,12 @@
 
 // const flash = require('express-flash');
 const express = require('express');
-const exphbs  = require('express-handlebars');
+const exphbs = require('express-handlebars');
 // const bodyParser = require('body-parser');
 const pizzasC = require('./pizza');
 const app = express();
 
-// const pizzas =  pizzaCart()
+const pizzas = pizzasC()
 
 const handlebarSetup = exphbs({
     partialsDir: "./views/partials",
@@ -29,6 +29,9 @@ app.set('view engine', 'handlebars');
 
 let counter = 0;
 
+
+
+
 app.get('/', function(req, res) {
 	res.render('index', {
 		counter
@@ -40,10 +43,21 @@ app.post('/count', function(req, res) {
 	res.redirect('/')
 });
 
+app.get('/', function(req,res){
+// pizzasC.getLargeTotal(),
+// pizzasC.getMediumTotal(),
+// pizzasC.getSmallTotal()
+    res.render('home')
+})
 
+app.post('/small', function(req,res){
+    res.redirect('/', {
+     
+    })
+})
 
 // start  the server and start listening for HTTP request on the PORT number specified...
 const PORT = process.env.PORT || 2000
 app.listen(PORT, function () {
-    console.log("App started at port:", PORT) 
+    console.log("App started at port:", PORT)
 });
