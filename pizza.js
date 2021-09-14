@@ -32,24 +32,35 @@ module.exports = function pizzaCart() {
 
         }
     }
-    function pizzaSmall() {
+    function pizzaSmall(pizzaTotalType) {
         if (pizzaTotalType === 'small') {
             smallTotal += 31.99
             pizzaTotal += 31.99
         }
     }
 
-
     function getLargeTotal() {
-        return largeTotal
+        return largeTotal.toFixed(2)
     }
     function getMediumTotal() {
-        return mediumTotal
+        return mediumTotal.toFixed(2)
     }
     function getSmallTotal() {
-        return smallTotal
+        return smallTotal.toFixed(2)
+    }
+    function getTotalpizzas(){
+        return pizzaTotal.toFixed(2)
     }
 
+    function pizzaOrders(){
+       let id= 0
+
+return {
+    'OrderId': id+1,
+    'status' : "Payment due",
+    'amount' : pizzaTotal
+}
+    }
     return {
         
         pizzaLarge,
@@ -57,6 +68,8 @@ module.exports = function pizzaCart() {
         pizzaSmall,
         getLargeTotal,
         getMediumTotal,
-        getSmallTotal
+        getSmallTotal,
+        getTotalpizzas,
+        pizzaOrders
     }
 }

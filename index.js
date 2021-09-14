@@ -1,5 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const pizza = require('./pizza');
 const pizzasC = require('./pizza');
 const app = express();
 
@@ -26,33 +27,42 @@ app.set('view engine', 'handlebars');
 
 let counter = 0;
 
+// app.get('/', function (req, res) {
+//     res.render('index', {
+//         counter
+//     });
+// });
+
+// app.post('/count', function (req, res) {
+//     counter++;
+//     res.redirect('/')
+// });
+
 app.get('/', function (req, res) {
+console.log( pizzas.getLargeTotal())
     res.render('index', {
-        counter
-    });
-});
-
-app.post('/count', function (req, res) {
-    counter++;
-    res.redirect('/')
-});
-
-app.get('/', function (req, res) {
-    res.render('index')
+        largePizza: pizzas.getLargeTotal(),
+        mediumPizza: pizzas.getMediumTotal(),
+        smallPizza: pizzas.getSmallTotal(),
+        totals:pizzas.getTotalpizzas()
+    })
 })
 
 app.post('/largeBuy', function (req, res) {
-    pizzasC.pizzaLarge(req.body.large)
+    pizzas.pizzaLarge(req.body.large)
     res.redirect('/')
 })
 app.post('/mediumBuy', function (req, res) {
-    pizzasC.pizzaMedium(req.body.medium)
+    pizzas.pizzaMedium(req.body.medium)
     res.redirect('/')
 })
 
 app.post('/smallBuy', function (req, res) {
-    pizzasC.pizzaSmall(req.body.small)
+    pizzas.pizzaSmall(req.body.small)
     res.redirect('/')
+})
+app.get('/orders', function(req,res){
+    res.render('')
 })
 
 // start  the server and start listening for HTTP request on the PORT number specified...
