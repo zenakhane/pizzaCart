@@ -3,37 +3,43 @@ module.exports = function pizzaCart() {
     var mediumTotal = 0
     var smallTotal = 0
     var pizzaTotal = 0
-    var pizzaChoiceDisplay = []
-    var largeCost = 87.99
-    var mediumCost = 58.99
-    var smallCost = 31.99
+    // var pizzaChoiceDisplay = []
 
-    function pizzaBuy(pizza) {
-        if (pizza === 'large') {
-            pizzaChoiceDisplay.push(pizza)
-        } else if (pizza === 'medium') {
-            pizzaChoiceDisplay.push(pizza)
 
-        } else if (pizza === 'small') {
-            pizzaChoiceDisplay.push(pizza)
-         }
-    }
-// post route
-    function pizzaTotals(pizzaTotalType) {
+    // function pizzaBuy(small,medium,large) {
+    //     if (pizza === 'small') {
+    //         pizzaChoiceDisplay.push(pizza)
+    //     } else if (pizza === 'medium') {
+    //         pizzaChoiceDisplay.push(pizza)
+
+    //     } else if (pizza === 'large') {
+    //         pizzaChoiceDisplay.push(pizza)
+    //      }
+    // }
+
+    function pizzaLarge(pizzaTotalType) {
         if (pizzaTotalType === 'large') {
             largeTotal += 87.99
             pizzaTotal += 87.99
 
-        } else if (pizzaTotalType === 'medium') {
+        }
+    }
+
+    function pizzaMedium(pizzaTotalType) {
+        if (pizzaTotalType === 'medium') {
             mediumTotal += 58.99
             pizzaTotal += 58.99
 
-        } else if (pizzaTotalType === 'small') {
+        }
+    }
+    function pizzaSmall() {
+        if (pizzaTotalType === 'small') {
             smallTotal += 31.99
             pizzaTotal += 31.99
         }
     }
-    // get route
+
+
     function getLargeTotal() {
         return largeTotal
     }
@@ -45,8 +51,10 @@ module.exports = function pizzaCart() {
     }
 
     return {
-        pizzaBuy,
-        pizzaTotals,
+        
+        pizzaLarge,
+        pizzaMedium,
+        pizzaSmall,
         getLargeTotal,
         getMediumTotal,
         getSmallTotal

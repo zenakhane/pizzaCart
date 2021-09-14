@@ -1,17 +1,4 @@
-{{!-- <h1>Counter Index</h1>
-
-
-<div>
-  Start here
-
-  <form action="/count" method="post">
-    <div class="counter">
-      {{counter}}
-    </div>
-    <input type="submit" value="Press button to count">
-
-  </form> --}}
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
    <head>
       <meta charset="utf-8">
@@ -29,19 +16,19 @@
             <table>
                <tr>
                   <td><strong>Small pizzas total:</strong></td>
-                  <td><span class="smallTotalPrice">0.00</span></td>
+                  <td><span class="smallTotalPrice">{{smallPizza}}</span></td>
                </tr>
                <tr>
                   <td><strong>Medium pizzas total:</strong></td>
-                  <td><span class="mediumTotalPrice">0.00</span></td>
+                  <td><span class="mediumTotalPrice">{{mediumPizza}}</span></td>
                </tr>
                <tr>
                   <td><strong>Large pizza total:</strong></td>
-                  <td><span class="largeTotalPrice">0.00</span></td>
+                  <td><span class="largeTotalPrice">{{largePizza}}</span></td>
                </tr>
                <tr>
                  <td><strong>Total cost</strong></td>
-                 <td><span class="cartTotalPrice">0.00</span></td>
+                 <td><span class="cartTotalPrice">{{totals}}</span></td>
                </tr>
                <tr>
                </tr>
@@ -55,12 +42,12 @@
          </div>
          </form>
          <div class="pizzas">
-            <form action="/buy" method="POST">
+            <form action="/largeBuy" method="POST">
             <div class="pizza_large">
                <div class="info">
                   <img src="pizza (1).png" alt="">
                   <h2>Large Pizza</h2>
-                  <strong>{{largePizza}}</strong>
+                  <strong>R87.99</strong>
                   <div>
                      large margeritha pizza with 3 toppings max.
                      3 meat toppings max.
@@ -72,12 +59,12 @@
                </div>
             </div>
             </form>
-            <form action="/buy" method="POST">
+            <form action="/mediumBuy" method="POST">
             <div class="pizza_medium">
                <div class="info">
                   <img src="pizza (1).png" alt="">
                   <h2>Medium Pizza</h2>
-                  <strong>{{mediumPizza}}</strong>
+                  <strong>R58.99</strong>
                   <div>
                      medium margeritha pizza with 3 toppings max.
                      2 or less meat topping.
@@ -90,12 +77,12 @@
 
             </div>
             </form>
-            <form action="/buy" method="POST">
+            <form action="/smallBuy" method="POST">
             <div class="pizza_small">
                <div class="info">
                   <img src="pizza (1).png" alt="">
                   <h2>Small Pizza</h2>
-                  <strong>{{smallPizza}}</strong>
+                  <strong>R31.99</strong>
                   <div>
                      small pizza with 3 toppings
                      1 meat topping.</li>
@@ -114,8 +101,8 @@
          </div>
       </div>
    </body>
-   {{!-- <script src="order-pizza.js"></script>
-   <script src="pizza.js"></script> --}}
+   <script src="order-pizza.js"></script>
+   <script src="pizza.js"></script>
    <hr>
    <div>
    </div>

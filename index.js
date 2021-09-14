@@ -1,8 +1,5 @@
-
-// const flash = require('express-flash');
 const express = require('express');
 const exphbs = require('express-handlebars');
-// const bodyParser = require('body-parser');
 const pizzasC = require('./pizza');
 const app = express();
 
@@ -29,31 +26,33 @@ app.set('view engine', 'handlebars');
 
 let counter = 0;
 
-
-
-
-app.get('/', function(req, res) {
-	res.render('index', {
-		counter
-	});
+app.get('/', function (req, res) {
+    res.render('index', {
+        counter
+    });
 });
 
-app.post('/count', function(req, res) {
-	counter++;
-	res.redirect('/')
+app.post('/count', function (req, res) {
+    counter++;
+    res.redirect('/')
 });
 
-app.get('/', function(req,res){
-// pizzasC.getLargeTotal(),
-// pizzasC.getMediumTotal(),
-// pizzasC.getSmallTotal()
-    res.render('home')
+app.get('/', function (req, res) {
+    res.render('index')
 })
 
-app.post('/small', function(req,res){
-    res.redirect('/', {
-     
-    })
+app.post('/largeBuy', function (req, res) {
+    pizzasC.pizzaLarge(req.body.large)
+    res.redirect('/')
+})
+app.post('/mediumBuy', function (req, res) {
+    pizzasC.pizzaMedium(req.body.medium)
+    res.redirect('/')
+})
+
+app.post('/smallBuy', function (req, res) {
+    pizzasC.pizzaSmall(req.body.small)
+    res.redirect('/')
 })
 
 // start  the server and start listening for HTTP request on the PORT number specified...
