@@ -8,41 +8,39 @@
    </head>
    <body>
       <div>
-         <div class="header">
-            <h1>Perfect Pizza</h1>
-         </div>
-         <div class="cart">
-            <h2>Shopping Cart</h2>
-            <table>
-               <tr>
-                  <td><strong>Small pizzas total:</strong></td>
-                  <td><span class="smallTotalPrice">{{smallPizza}}</span></td>
-               </tr>
-               <tr>
-                  <td><strong>Medium pizzas total:</strong></td>
-                  <td><span class="mediumTotalPrice">{{mediumPizza}}</span></td>
-               </tr>
-               <tr>
-                  <td><strong>Large pizza total:</strong></td>
-                  <td><span class="largeTotalPrice">{{largePizza}}</span></td>
-               </tr>
-               <tr>
-                 <td><strong>Total cost</strong></td>
-                 <td><span class="cartTotalPrice">{{totals}}</span></td>
-               </tr>
-               <tr>
-               </tr>
-            </table>
-            
-        
-            <form action="/orders" method="GET">
+      <div class="header">
+         <h1>Perfect Pizza</h1>
+      </div>
+      <div class="cart">
+         <h2>Shopping Cart</h2>
+         <table>
+            <tr>
+               <td><strong>Small pizzas total:</strong></td>
+               <td><span class="smallTotalPrice">{{smallPizza}}</span></td>
+            </tr>
+            <tr>
+               <td><strong>Medium pizzas total:</strong></td>
+               <td><span class="mediumTotalPrice">{{mediumPizza}}</span></td>
+            </tr>
+            <tr>
+               <td><strong>Large pizza total:</strong></td>
+               <td><span class="largeTotalPrice">{{largePizza}}</span></td>
+            </tr>
+            <tr>
+               <td><strong>Total cost</strong></td>
+               <td><span class="cartTotalPrice">{{totals}}</span></td>
+            </tr>
+            <tr>
+            </tr>
+         </table>
+         <form action="/orders" method="POST">
             <div class="orderBox">
-              <button type="submit" class="orderPizzabtn"style="width: 70%;" onclick="myFunction()">Order</button>
+               <button type="submit" class="orderPizzabtn" style="width: 70%;" onclick="myFunction()">Order</button>
             </div>
-         </div>
-         </form>
-         <div class="pizzas">
-            <form action="/largeBuy" method="POST">
+      </div>
+      </form>
+      <div class="pizzas">
+         <form action="/largeBuy" method="POST">
             <div class="pizza_large">
                <div class="info">
                   <img src="pizza (1).png" alt="">
@@ -55,13 +53,12 @@
                   </div>
                </div>
                <div class="orderBox">
-                  <button type="submit" class="btn orderLargePizza" style="width: 70%;"  value="large"name="large" onclick="myFunction()">Buy</button>
+                  <button type="submit" class="btn orderLargePizza" style="width: 70%;" value="large" name="large"
+                     onclick="myFunction()">Buy</button>
                </div>
             </div>
-            </form>
-
-           
-            <form action="/mediumBuy" method="POST">
+         </form>
+         <form action="/mediumBuy" method="POST">
             <div class="pizza_medium">
                <div class="info">
                   <img src="pizza (1).png" alt="">
@@ -74,12 +71,12 @@
                   </div>
                </div>
                <div class="orderBox">
-                  <button type="submit" class="btn orderMediumPizza" style="width: 70%;" value="medium"name="medium"  type="submit" onclick="myFunction()">Buy</button>
+                  <button type="submit" class="btn orderMediumPizza" style="width: 70%;" value="medium" name="medium"
+                     type="submit" onclick="myFunction()">Buy</button>
                </div>
-
             </div>
-            </form>
-            <form action="/smallBuy" method="POST">
+         </form>
+         <form action="/smallBuy" method="POST">
             <div class="pizza_small">
                <div class="info">
                   <img src="pizza (1).png" alt="">
@@ -90,18 +87,19 @@
                      1 meat topping.</li>
                      3 or less other toppings
                      <div>
-               </div>
-               <div class="orderBox">
-                  <button type="submit" class="btn orderSmallPizza" style="width: 70%;" value="small" name="small"  type="submit" onclick="myFunction()">Buy</button>
-               </div>
-            </div>
-            </form>
+                     </div>
+                     <div class="orderBox">
+                        <button type="submit" class="btn orderSmallPizza" style="width: 70%;" value="small" name="small"
+                           type="submit" onclick="myFunction()">Buy</button>
+                     </div>
+                  </div>
+         </form>
          </div>
          <div class="footer">
-            <div class="contact">
-            </div>
+         <div class="contact">
          </div>
-      </div>
+         </div>
+         </div>
    </body>
    <script src="order-pizza.js"></script>
    <script src="pizza.js"></script>

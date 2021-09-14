@@ -61,8 +61,8 @@ app.post('/smallBuy', function (req, res) {
     pizzas.pizzaSmall(req.body.small)
     res.redirect('/')
 })
-app.get('/orders', function(req,res){
-    res.render('')
+app.post('/orders', function(req,res){
+    res.redirect('/')
 })
 
 // start  the server and start listening for HTTP request on the PORT number specified...

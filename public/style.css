@@ -3,16 +3,16 @@ body {
 	font-family: arial, sans-serif;
 	background-color: #3FA9E2;
 	font-size: 0.75em;
-  }
+}
 
 .btn {
 	padding: 1em;
 	margin: 1em;
 	font-size: 1em;
-	background-color:gray;
+	background-color: gray;
 	border-radius: 0.25em;
 	border: 0 solid snow;
-	color: snow; 
+	color: snow;
 }
 
 .container {
@@ -23,129 +23,139 @@ body {
 	border-radius: 1em;
 }
 
+.btn-sm {
+	padding: 0.25em;
+	margin: 0.25em;
+	font-size: 0.75em;
+	background-color: grey;
+}
 
-  	.btn-sm {
-		padding: 0.25em;
-		margin: 0.25em;
-		font-size: 0.75em;
-		background-color: grey;
-	}
+.btn-med {
+	padding: 0.75em;
+	margin: 0.75em;
+	font-size: 0.75em;
+	background-color: grey;
+}
 
-  	.btn-med {
-		padding: 0.75em;
-		margin: 0.75em;
-		font-size: 0.75em;
-		background-color: grey;
-	}
-    
-	.pizzas{
-			display: grid;
-			grid-template-columns: 30% 30% 30%;
-			grid-gap: 2%;	
-	}
+.pizzas {
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-gap: 2%;
+}
 
-	.pizza_large{
-		background-color:chocolate;
-		margin: 10px;
-		text-align: center;
-		border-radius: 10px;
-		
-	}
-	.pizza_medium{
-    background-color: rgb(226, 207, 60);
-    margin: 10px;
+.pizza_large {
+	background-color: chocolate;
+	margin: 10px;
 	text-align: center;
 	border-radius: 10px;
-		
-	}
-	.pizza_small{
-		background-color: rgb(228, 20, 159);
-		margin: 10px;
-		text-align: center;
-		border-radius: 10px;
-		
-	}
-	.orderPizzabtn{
-		padding: 1em;
-		margin: 1em;
-		font-size: 1em;
-		background-color:gray;
-		border-radius: 0.25em;
-		border: 0 solid snow;
-		color: snow
-		}
+}
 
-	ul{
-		list-style-type: none;
-	}
-	.cart {
-		/* position: fixed;  */
-		width: 100%;
-		margin: auto; 
-		 width: 40%; 
-		min-height: 15em; 
-		background-color: #CDD93F;
-		top: 0em;
-		right: 0em;
-		margin-left: 1em;
-		padding: 1em;
-	
-		border-radius: 0.25em;
-		 z-index: 1000; 
-	}
+.pizza_medium {
+	background-color: rgb(226, 207, 60);
+	margin: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
 
-	.cartTotal {
-		position: fixed;
-		/* width: 100%; */
-		/* margin: auto; */
-		width: 20%;
-		/* min-height: 15em; */
-		/* background-color: #CDD93F; */
-		top: 0em;
-		right: 0em;
-		margin-right: 1em;
-		padding: 1em;
-		/* border: 0.1em solid; */
-		border-radius: 0.25em;
-		/* z-index: 1000; */
-	}
+.pizza_small {
+	background-color: rgb(228, 20, 159);
+	margin: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
 
-	.cart table {
-		border-collapse:collapse;
-	}
-	
-	.cart table {
-		border-collapse: collapse;
-		width: 50%;
-	}
+.orderPizzabtn {
+	padding: 1em;
+	margin: 1em;
+	font-size: 1em;
+	background-color: gray;
+	border-radius: 0.25em;
+	border: 0 solid snow;
+	color: snow
+}
 
-	.cart td {
-		border-top: 1px solid snow;
-	} 
+ul {
+	list-style-type: none;
+}
 
-	.cart th, td {
-		padding: 15px;
-		text-align: left;
-	}
-	.cart tr{
-		border-collapse: collapse;
+.cart {
+	/* position: fixed;  */
+	width: 100%;
+	margin: auto;
+	width: 40%;
+	min-height: 15em;
+	background-color: #CDD93F;
+	top: 0em;
+	right: 0em;
+	margin-left: 1em;
+	padding: 1em;
+	border-radius: 0.25em;
+	z-index: 1000;
+}
 
-	}
+.cartTotal {
+	position: fixed;
+	/* width: 100%; */
+	/* margin: auto; */
+	width: 20%;
+	/* min-height: 15em; */
+	/* background-color: #CDD93F; */
+	top: 0em;
+	right: 0em;
+	margin-right: 1em;
+	padding: 1em;
+	/* border: 0.1em solid; */
+	border-radius: 0.25em;
+	/* z-index: 1000; */
+}
 
-	.cart img {
-		width: 2em;
-	}
+.cart table {
+	border-collapse: collapse;
+}
 
-	.cart h3 {
-		/* text-decoration: underline; */display: inline;
-	}
+.cart table {
+	border-collapse: collapse;
+	width: 50%;
+}
 
-	.cartTotal {
-		padding: 1em;
-	}
+.cart td {
+	border-top: 1px solid snow;
+}
 
-	.cartTotal img {
-		/* padding: 1em; */
-		width: 2em;
-	}
-	
+.cart th,
+td {
+	padding: 15px;
+	text-align: left;
+}
+
+.cart tr {
+	border-collapse: collapse;
+}
+
+.cart img {
+	width: 2em;
+}
+
+.cart h3 {
+	/* text-decoration: underline; */
+	display: inline;
+}
+
+.cartTotal {
+	padding: 1em;
+}
+
+.cartTotal img {
+	/* padding: 1em; */
+	width: 2em;
+}
+
+.ordersTable {
+	margin-left: 1em;
+	border-collapse: separate;
+}
+
+.orders {
+	margin-left: 50em;
+	float: right;
+}
